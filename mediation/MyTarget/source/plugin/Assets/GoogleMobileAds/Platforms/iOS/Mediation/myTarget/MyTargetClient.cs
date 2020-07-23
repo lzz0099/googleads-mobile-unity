@@ -35,15 +35,11 @@ namespace GoogleMobileAds.iOS.Mediation.MyTarget
 
         public void SetUserConsent(bool userConsent)
         {
-            string parameterString = (userConsent == true ? "YES" : "NO");
-            MonoBehaviour.print ("Calling '[MTRGPrivacy setUserConsent:]' with argument: " + parameterString);
             Externs.GADUMMyTargetSetUserConsent (userConsent);
         }
 
         public void SetUserAgeRestricted(bool userAgeRestricted)
         {
-            string parameterString = (userAgeRestricted == true ? "YES" : "NO");
-            MonoBehaviour.print ("Calling '[MTRGPrivacy setUserAgeRestricted:]' with argument: " + parameterString);
             Externs.GADUMMyTargetSetUserAgeRestricted (userAgeRestricted);
         }
 
